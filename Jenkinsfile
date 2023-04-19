@@ -9,7 +9,7 @@ pipeline {
         }
         stage("docker") {
             steps {
-                sh "sudo docker version"
+                sh "ls"
             }
         }
     }
