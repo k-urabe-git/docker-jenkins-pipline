@@ -7,9 +7,14 @@ pipeline {
                 echo 'Hello Jenkins-pipeline'
             }
         }
-        stage("docker") {
+        stage("ls-a") {
             steps {
-                sh "ls"
+                sh "ls-a"
+            }
+        }
+        stage("pwd") {
+            steps {
+                sh "pwd"
             }
         }
     }
