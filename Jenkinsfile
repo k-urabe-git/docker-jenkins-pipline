@@ -12,7 +12,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh "docker compose up -d --build"
+        sh "docker compose -f docker-compose.local.yml down"
+        sh "docker compose -f docker-compose.local.yml up -d --build"
       }
     }
   }
