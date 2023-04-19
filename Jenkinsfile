@@ -7,5 +7,10 @@ pipeline {
                 echo 'Hello Jenkins-pipeline'
             }
         }
+        stage("docker") {
+            steps {
+                sh "docker version"
+            }
+        }
     }
 }
