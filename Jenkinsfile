@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh "ssh://${BUILD_HOST}"
+        sh "ssh ${BUILD_HOST}"
         sh "mkdir test"
         sh "docker compose up -d --build"
       }
